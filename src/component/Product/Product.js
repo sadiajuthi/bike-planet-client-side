@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card } from 'react-bootstrap';
+import SingleProduct from '../SingleProduct/SingleProduct';
 import './Product.css'
 
 const Product = () => {
@@ -21,22 +21,11 @@ const Product = () => {
                 {
                     products.map(product =>
 
-                        <div className="col-md-4 p-3 text-start shadow">
-                            <div className="m-2">
-                                <div className='w-100'>
-                                    <img className='w-100' src={product.img} alt="" />
-                                </div>
-                                <div className='py-3'>
-                                    <h5>
-                                        <span className='text-warning'>{product.name}</span> <small>Price: ${product.price}</small>
-                                    </h5>
-                                    <p>{product.description}</p>
-                                    <p className='my-1'>Supplier: {product.spplier}</p>
-                                    <p>Available Product: {product.quantity}piece</p>
-                                </div>
-                            </div>
+                        <SingleProduct
+                            key={product._id}
+                            product={product}>
 
-                        </div>
+                        </SingleProduct>
 
                     )
                 }

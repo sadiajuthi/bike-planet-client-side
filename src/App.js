@@ -8,6 +8,7 @@ import Header from './component/Header/Header';
 import Inventory from './component/Inventory/Inventory';
 import Login from './component/Login/Login';
 import Register from './component/Register/Register';
+import UpdateProduct from './component/UpdateProduct/UpdateProduct';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/inventory' element={<Inventory></Inventory>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/update/:productId' element={<UpdateProduct></UpdateProduct>}></Route>
       </Routes>
 
       <Footer></Footer>
