@@ -1,0 +1,50 @@
+[
+    {
+        "name": "TVS Apache RTR 160 4V",
+        "img": "https://as2.ftcdn.net/v2/jpg/00/30/69/87/1000_F_30698750_RX5TMOc87GD354sPHV8JOQr2uBRIA17R.jpg",
+        "description": " It is available in 6 variants and 4 colours with top variant. The TVS Apache RTR 160 4V is powered by 159.7cc BS6 engine which develops a power of 17.39 bhp and a torque of 14.73 Nm.",
+        "price": "4000",
+        "quantity": "10",
+        "spplier": ""
+    },
+    {
+        "name": "Honda SP 125",
+        "img": "https://as2.ftcdn.net/v2/jpg/02/34/21/83/1000_F_234218337_sHgFOGQlhXxhrtH1oBPfbvs4cfUm6Mqp.jpg",
+        "description": "The bike is available in 2 variants with 4 colour options. The 124.0 cc engine of SP 125 is mated with 5 gears, producing maximum power of 10.70 bhp @ 7500 rpm.",
+        "price": "8000",
+        "quantity": "7",
+        "spplier": "Abdul Karim"
+    },
+    {
+        "name": "Yamaha MT-15",
+        "img": "https://img.freepik.com/free-photo/motorcycle-with-helmet_23-2148875785.jpg?t=st=1651444982~exp=1651445582~hmac=c7d7e78010aed236dc561eb8f3a2321c4a3831502ec1f66b034e9577d922325c&w=740",
+        "description": "Yamaha MT 15 is a street bike.This is a Pure-bred hyper naked, one of the most dynamic light weights from the MT stable.It had 4 variants and 4 colours.",
+        "price": "4000",
+        "quantity": "10",
+        "spplier": "Musa Aman"
+    },
+    {
+        "name": "Suzuki Hayabusa",
+        "img": "https://as2.ftcdn.net/v2/jpg/00/78/46/57/1000_F_78465781_dE96yX4ATdmvLHIQ6kBQ2o8ctelkGcVj.jpg",
+        "description": " The Suzuki GSX1300R Hayabusa is a sports motorcycle made by Suzuki since 1999. It immediately won acclaim as the world's fastest production motorcycle.",
+        "price": "9000",
+        "quantity": "5",
+        "spplier": "Muhammad Hussain"
+    },
+    {
+        "name": "Suzuki Gixxer SF",
+        "img": "https://img.freepik.com/free-photo/driving-green-neon-color-motorcycle-road_114579-5031.jpg?t=st=1651445202~exp=1651445802~hmac=914ddd92e5fd031c43f9a9f8e06f44d0f76f786eb58d24307748db193a8193fb&w=740",
+        "description": "Suzuki Gixxer SF is a sports bike.It is available in only 1 variant and 3 colours. It is powered by 155cc BS6 engine which develops a power of 13.4 bhp and a torque of 13.8 Nm.",
+        "price": "3000",
+        "quantity": "15",
+        "spplier": "Md. Saiful Islam"
+    },
+    {
+        "name": "TVS Apache RR 310",
+        "img": "https://img.freepik.com/free-photo/high-speed-motorcycle-biking-road-accross-forest_114579-6110.jpg?t=st=1651423977~exp=1651424577~hmac=1cb47db2beb421e96bf4a5d7c7a56f63e45240cc5a8bceacdd698bbe5534f6f2&w=740",
+        "description": " The TVS Apache RR 310 is a sport bike made by the TVS Motor Company. It uses a 312.2 cc single-cylinder, four-stroke, SI, liquid-cooled, DOHC reverse inclined engine.",
+        "price": "3500",
+        "quantity": "12",
+        "spplier": "AM Khandaker"
+    }
+]
