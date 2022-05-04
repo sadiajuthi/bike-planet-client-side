@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import Loading from '../Loading/Loading';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { FiArrowRight } from "react-icons/fi";
+
 
 const UpdateProduct = () => {
     const { productId } = useParams();
@@ -16,13 +19,15 @@ const UpdateProduct = () => {
 
     const handleDelivered = e => {
 
-        const quantityBfrDeliver = parseInt(product.quantity)
+        let quantityAfterDeliver = product.quantity - 1;
 
-        const quantityAftrDeliver = quantityBfrDeliver - 1;
+        if (quantityAfterDeliver < 0) {
+            alert("Product finish.please restock")
+            quantityAfterDeliver = product.quantity
+        }
+        const newProduct = { ...product, quantity: quantityAfterDeliver }
 
-
-        let updatedProduct = { quantityAftrDeliver }
-        console.log(quantityAftrDeliver);
+        setProduct(newProduct)
 
         const url = `http://localhost:5000/product/${productId}`
         fetch(url, {
@@ -30,14 +35,13 @@ const UpdateProduct = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(updatedProduct)
+            body: JSON.stringify(newProduct)
         })
 
             .then(res => res.json())
             .then(data => {
-                console.log(data);
-                alert('delivered')
-
+                console.log(newProduct);
+                toast('your product is delivered');
 
             })
     }
@@ -47,20 +51,20 @@ const UpdateProduct = () => {
 
 
     const handleUpdateProduct = event => {
-        // event.preventDefault();
+        event.preventDefault();
         const preQuantity = parseInt(product.quantity)
         const newQuantity = parseInt(event.target.number.value);
 
-        let quantity = preQuantity + newQuantity
-        if (quantity < 0) {
+        let updatedquantity = preQuantity + newQuantity
+        if (updatedquantity < 0) {
             alert('product cannot be negetive')
-            quantity = preQuantity;
+            updatedquantity = preQuantity;
         }
 
-        let updatedProduct = { quantity }
+        const updatedProduct = { ...product, quantity: updatedquantity }
         console.log(preQuantity + newQuantity)
 
-
+        setProduct(updatedProduct)
         //update data
         const url = `http://localhost:5000/product/${productId}`
         fetch(url, {
@@ -73,7 +77,8 @@ const UpdateProduct = () => {
             .then(res => res.json())
             .then(data => {
                 console.log('success', data);
-                event.target.reset(product.quantity);
+                event.target.reset();
+                toast('Stock is Updated');
 
             })
     }
@@ -82,36 +87,41 @@ const UpdateProduct = () => {
 
     return (
 
-        <div className="container mt-5 mb-5">
-            <h2 className='text-warning text-center p-4'>{product.name}</h2>
-            <div className='row'>
-                <div className='col-md-7'>
-                    <img className='w-100' src={product.img} alt="" />
-                </div>
-                <div className='col-md-5 p-2'>
-                    <h4>
-                        Price: ${product.price}
-                    </h4>
-                    <h5>id: {product._id}</h5>
+        <div className="mt-4 mb-5 pb-5 w-75 mx-auto ">
+            <ToastContainer />
+            <div className="">
+                <h1 className='text-warning text-center p-4'>{product.name}</h1>
+                <div className='row'>
+                    <img className='col-md-5 img-fluid' src={product.img} alt="" />
 
-                    <p>{product.description}</p>
-                    <p className='my-1'>Supplier: {product.spplier}</p>
-                    <p>Available Product: {product.quantity}piece</p>
-                    <button onClick={handleDelivered}>Deliver</button>
-                    <h4>Update your product quantity</h4>
-                    <hr />
-                    <form onSubmit={handleUpdateProduct}>
-                        <label htmlFor="">Select the product quantity you want to add:</label>
-                        <br />
-                        <input className='w-75 my-2 py-2' type="number" name="number" id="" placeholder='Quantity' />
-                        <br />
-                        <input className='btn rounded-pill btn-warning px-5 py-2 my-2' type="submit" value="Update" />
-                    </form>
+                    <div className='col-md-4 ps-2'>
+                        <h4>
+                            Price: ${product.price}
+                        </h4>
+                        <h6>id: {product._id}</h6>
+
+                        <p>{product.description}</p>
+                        <p className='my-1'>Supplier: {product.spplier}</p>
+                        <p>Available Product: {product.quantity} piece</p>
+                        <button className='btn btn-warning rounded-pill px-5 py-1 w-50' onClick={handleDelivered}>Deliver</button>
+                    </div>
+
+                    <div className="col-md-3">
+                        <h4>Restock product</h4>
+                        <hr />
+                        <form onSubmit={handleUpdateProduct}>
+                            <label htmlFor="">Select the product quantity you want to stock:</label>
+                            <br />
+                            <input className='w-100 my-2 py-2' type="number" name="number" id="" placeholder='Quantity' />
+                            <br />
+                            <input className='btn rounded-pill btn-warning w-75 py-1 my-2' type="submit" value="Update" />
+                        </form>
+                        <div className='mt-4 ms-2'>
+                            <Link className='text-warning btn-link fs-6' to='/inventory'> Manage Inventories<span className='fs-5, text-warning'><FiArrowRight /></span></Link>
+                        </div>
+                    </div>
 
                 </div>
-            </div>
-            <div className=''>
-                <Link className='btn btn-warning mt-5 py-2 px-5 rounded-pill' to='/manageproduct'>Manage Products </Link>
             </div>
         </div>
 

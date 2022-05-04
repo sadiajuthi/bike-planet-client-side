@@ -20,7 +20,7 @@ const Home = () => {
             {/* About us secttion */}
             <section className='container mt-5 py-5'>
                 <div className="row text-start justify-content-center p-3">
-                    <h2 className='text-center mb-3'>ABOUT US</h2>
+                    <h2 className='mb-3'>ABOUT US</h2>
                     <hr />
                     <div className="col-md-5 pt-4">
                         <img className='img-fluid' src={img1} alt="" />

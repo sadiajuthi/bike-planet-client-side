@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import SingleProduct from '../SingleProduct/SingleProduct';
 import './Product.css'
+import { FiArrowRight } from "react-icons/fi";
 
 const Product = () => {
     const [products, setProduct] = useState([]);
@@ -19,7 +21,7 @@ const Product = () => {
             <hr />
             <div className="row">
                 {
-                    products.map(product =>
+                    products.slice(1, 7).map(product =>
 
                         <SingleProduct
                             key={product._id}
@@ -29,6 +31,7 @@ const Product = () => {
 
                     )
                 }
+                <Link className='text-warning btn-link fs-6 text-center mt-4 ' to='/inventory'> Manage Inventories<span className='fs-5, text-warning'><FiArrowRight /></span></Link>
             </div>
         </div>
     );

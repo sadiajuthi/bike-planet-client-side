@@ -28,7 +28,7 @@
         "img": "https://as2.ftcdn.net/v2/jpg/00/78/46/57/1000_F_78465781_dE96yX4ATdmvLHIQ6kBQ2o8ctelkGcVj.jpg",
         "description": " The Suzuki GSX1300R Hayabusa is a sports motorcycle made by Suzuki since 1999. It immediately won acclaim as the world's fastest production motorcycle.",
         "price": "9000",
-        "quantity": "5",
+        "quantity": "8",
         "spplier": "Muhammad Hussain"
     },
     {
@@ -40,11 +40,107 @@
         "spplier": "Md. Saiful Islam"
     },
     {
-        "name": "TVS Apache RR 310",
+        "name": "Apache RR 310",
         "img": "https://img.freepik.com/free-photo/high-speed-motorcycle-biking-road-accross-forest_114579-6110.jpg?t=st=1651423977~exp=1651424577~hmac=1cb47db2beb421e96bf4a5d7c7a56f63e45240cc5a8bceacdd698bbe5534f6f2&w=740",
         "description": " The TVS Apache RR 310 is a sport bike made by the TVS Motor Company. It uses a 312.2 cc single-cylinder, four-stroke, SI, liquid-cooled, DOHC reverse inclined engine.",
         "price": "3500",
         "quantity": "12",
         "spplier": "AM Khandaker"
+    },
+    {
+        "name": "Kawasaki Ninja H2R",
+        "img": "https://cdn.pixabay.com/photo/2021/07/27/18/16/motorcycle-6497541_960_720.jpg",
+        "description": " The Kawasaki Ninja H2R is powered by 998cc BS6 engine which develops a power of 305.75 bhp and a torque of 165 Nm. With both front and rear disc brakes.",
+        "price": "35000",
+        "quantity": "2",
+        "spplier": "Musa Aman"
+    },
+    {
+        "name": "Ducati Panigale V4",
+        "img": "https://cdn.pixabay.com/photo/2021/11/30/14/53/ducati-999-6835544_960_720.jpg",
+        "description": "It is available in 3 variants and 3 colours. Powered by a 1103 cc bs6 engine,it has a 6-Speed gearbox. The Ducati Panigale V4 has Disc front brakes and Disc rear brakes.",
+        "price": "18000",
+        "quantity": "4",
+        "spplier": "Musa Aman"
+    },
+    {
+        "name": "Ducati Streetfighter V4",
+        "img": "https://cdn.pixabay.com/photo/2021/01/01/21/51/motorbike-5880126_960_720.jpg",
+        "description": "It is available in 3 variants and 3 colours. Powered by a 1103 cc bs6 engine, also has a 6 Speed gearbox. The Ducati Streetfighter V4 has Disc front brakes.",
+        "price": "23000",
+        "quantity": "10",
+        "spplier": "Musa Aman"
+    },
+    {
+        "name": "Yamaha YZF R15 V3",
+        "img": "https://cdn.pixabay.com/photo/2017/06/26/22/43/ktm-2445495_960_720.jpg",
+        "description": "It is available in 5 variants and 4 colours. Powered by a 155 cc bs6 engine, the Yamaha YZF R15 V3 has a 6-Speed gearbox. The Yamaha YZF R15 V3 has Disc front brakes.",
+        "price": "14000",
+        "quantity": "12",
+        "spplier": "Md. Saiful Islam"
+    },
+    {
+        "name": "BMW M 1000 RR",
+        "img": "https://cdn.pixabay.com/photo/2018/02/12/02/05/motorcycle-3147278_960_720.jpg",
+        "description": " BMW M 1000 RR is powered by 999cc BS6 engine which develops a power of 209.19 bhp and a torque of 113 Nm. With both front and rear disc brakes.",
+        "price": "20000",
+        "quantity": "5",
+        "spplier": "AM Khandaker"
+    },
+    {
+        "name": "Kawasaki Z900",
+        "img": "https://cdn.pixabay.com/photo/2014/10/24/08/31/motorcycle-500910_960_720.jpg",
+        "description": "It is available in 1 variant and 2 colours. Powered by a 948 cc bs6 engine, the Kawasaki Z900 has a 6 Speed gearbox. The Kawasaki Z900 has Double Disc front brakes and Disc rear brakes.",
+        "price": "9000",
+        "quantity": "15",
+        "spplier": "Md. Saiful Islam"
+    },
+    {
+        "name": "Yamaha YZF R15 V3",
+        "img": "https://cdn.pixabay.com/photo/2017/06/26/22/43/ktm-2445495_960_720.jpg",
+        "description": "It is available in 5 variants and 4 colours. Powered by a 155 cc bs6 engine, the Yamaha YZF R15 V3 has a 6-Speed gearbox. The Yamaha YZF R15 V3 has Disc front brakes.",
+        "price": "14000",
+        "quantity": "12",
+        "spplier": "Md. Saiful Islam"
+    },
+    {
+        "name": "BMW M 1000 RR",
+        "img": "https://cdn.pixabay.com/photo/2018/02/12/02/05/motorcycle-3147278_960_720.jpg",
+        "description": " BMW M 1000 RR is powered by 999cc BS6 engine which develops a power of 209.19 bhp and a torque of 113 Nm. With both front and rear disc brakes.",
+        "price": "20000",
+        "quantity": "5",
+        "spplier": "AM Khandaker"
+    },
+    {
+        "name": "Kawasaki Z900",
+        "img": "https://cdn.pixabay.com/photo/2014/10/24/08/31/motorcycle-500910_960_720.jpg",
+        "description": "It is available in 1 variant and 2 colours. Powered by a 948 cc bs6 engine, the Kawasaki Z900 has a 6 Speed gearbox. The Kawasaki Z900 has Double Disc front brakes and Disc rear brakes.",
+        "price": "9000",
+        "quantity": "15",
+        "spplier": "Md. Saiful Islam"
+    },
+    {
+        "name": "Yamaha YZF R15 V3",
+        "img": "https://cdn.pixabay.com/photo/2017/06/26/22/43/ktm-2445495_960_720.jpg",
+        "description": "It is available in 5 variants and 4 colours. Powered by a 155 cc bs6 engine, the Yamaha YZF R15 V3 has a 6-Speed gearbox. The Yamaha YZF R15 V3 has Disc front brakes.",
+        "price": "14000",
+        "quantity": "12",
+        "spplier": "Md. Saiful Islam"
+    },
+    {
+        "name": "BMW M 1000 RR",
+        "img": "https://cdn.pixabay.com/photo/2018/02/12/02/05/motorcycle-3147278_960_720.jpg",
+        "description": " BMW M 1000 RR is powered by 999cc BS6 engine which develops a power of 209.19 bhp and a torque of 113 Nm. With both front and rear disc brakes.",
+        "price": "20000",
+        "quantity": "5",
+        "spplier": "AM Khandaker"
+    },
+    {
+        "name": "Kawasaki Z900",
+        "img": "https://cdn.pixabay.com/photo/2014/10/24/08/31/motorcycle-500910_960_720.jpg",
+        "description": "It is available in 1 variant and 2 colours. Powered by a 948 cc bs6 engine, the Kawasaki Z900 has a 6 Speed gearbox. The Kawasaki Z900 has Double Disc front brakes and Disc rear brakes.",
+        "price": "9000",
+        "quantity": "15",
+        "spplier": "Md. Saiful Islam"
     }
 ]
