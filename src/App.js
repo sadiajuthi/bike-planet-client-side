@@ -26,8 +26,9 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/update/:productId' element={<UpdateProduct></UpdateProduct>}></Route>
+
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
-      <Route path='*' element={<NotFound></NotFound>}></Route>
 
       <Footer></Footer>
     </div>
