@@ -10,6 +10,7 @@ import Login from './component/Login/Login';
 import Register from './component/Register/Register';
 import UpdateProduct from './component/UpdateProduct/UpdateProduct';
 import Additem from './component/Additem/Additem';
+import NotFound from './component/NotFound/NotFound';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/update/:productId' element={<UpdateProduct></UpdateProduct>}></Route>
       </Routes>
+      <Route path='*' element={<NotFound></NotFound>}></Route>
 
       <Footer></Footer>
     </div>
