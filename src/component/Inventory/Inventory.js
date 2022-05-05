@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { RiDeleteBin5Fill } from "react-icons/ri";
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const Inventory = () => {
     const [products, setProduct] = useState([]);
@@ -20,7 +20,11 @@ const Inventory = () => {
             const url = `http://localhost:5000/product/${id}`;
             console.log(id);
             fetch(url, {
-                merhod: 'DELETE'
+                merhod: 'DELETE',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(deleteProduct)
             })
                 .then(res => res.json())
                 .then(data => {
@@ -33,7 +37,7 @@ const Inventory = () => {
 
     return (
         <div className='container'>
-            <h1>Manage Products</h1>
+            <h1>Manage Inventories</h1>
 
 
             <div className="">
@@ -64,10 +68,7 @@ const Inventory = () => {
                     )}
                 </Table>
             </div>
-
-
-
-
+            <p className='mt-5 text-end'>Please visit <Link to='/additem'><span className='text-warning'>Add Item</span></Link> to add a new inventory.</p>
 
         </div>
     );
