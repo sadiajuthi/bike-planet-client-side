@@ -1,11 +1,12 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './Header.css'
 
 const Header = () => {
     return (
 
-        <Navbar className='sticky-top' collapseOnSelect expand="md" bg="dark" variant="dark">
+        <Navbar id='nav-bg' className='sticky-top' collapseOnSelect expand="md" variant="dark">
             <Container>
                 <Navbar.Brand as={Link} to='/home' className='text-warning fw-bold'>BIKE PLANET</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -20,6 +21,7 @@ const Header = () => {
                         <Nav.Link as={Link} to='/login'>Login</Nav.Link>
                         <Nav.Link as={Link} to='/register'>Register</Nav.Link>
                     </Nav>
+
                 </Navbar.Collapse>
             </Container>
         </Navbar>

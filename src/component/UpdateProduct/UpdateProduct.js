@@ -10,7 +10,7 @@ const UpdateProduct = () => {
     const [product, setProduct] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/product/${productId}`;
+        const url = `https://lit-gorge-25898.herokuapp.com/product/${productId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data));
@@ -20,16 +20,19 @@ const UpdateProduct = () => {
     const handleDelivered = e => {
 
         let quantityAfterDeliver = product.quantity - 1;
+        const sold = quantityAfterDeliver < 1
 
-        if (quantityAfterDeliver < 0) {
-            alert("Product finish.please restock")
-            quantityAfterDeliver = product.quantity
+        if (sold) {
+
+            quantityAfterDeliver = "Out of Stock"
         }
+
+
         const newProduct = { ...product, quantity: quantityAfterDeliver }
 
         setProduct(newProduct)
 
-        const url = `http://localhost:5000/product/${productId}`
+        const url = `https://lit-gorge-25898.herokuapp.com/product/${productId}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -52,21 +55,24 @@ const UpdateProduct = () => {
 
     const handleUpdateProduct = event => {
         event.preventDefault();
-        const preQuantity = parseInt(product.quantity)
+        let preQuantity = parseInt(product.quantity)
         const newQuantity = parseInt(event.target.number.value);
 
+
         let updatedquantity = preQuantity + newQuantity
-        if (updatedquantity < 0) {
-            alert('product cannot be negetive')
-            updatedquantity = preQuantity;
+
+        if (updatedquantity !== Number) {
+            updatedquantity = newQuantity;
         }
+
+
 
         const updatedProduct = { ...product, quantity: updatedquantity }
         console.log(preQuantity + newQuantity)
 
         setProduct(updatedProduct)
         //update data
-        const url = `http://localhost:5000/product/${productId}`
+        const url = `https://lit-gorge-25898.herokuapp.com/product/${productId}`
         fetch(url, {
             method: 'PUT',
             headers: {

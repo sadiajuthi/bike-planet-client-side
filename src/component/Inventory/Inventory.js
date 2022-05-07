@@ -1,35 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { RiDeleteBin5Fill } from "react-icons/ri";
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Inventory = () => {
     const [products, setProduct] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://lit-gorge-25898.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setProduct(data));
     }, [])
 
-    const handleDelete = id => {
+
+
+    const handleDelete = _id => {
 
         const deleteProduct = window.confirm('Are you sure to delete this item?')
         if (deleteProduct) {
-            console.log('delete product', id);
-            const url = `http://localhost:5000/product/${id}`;
-            console.log(id);
+            const url = `https://lit-gorge-25898.herokuapp.com/product/${_id}`;
+
             fetch(url, {
-                merhod: 'DELETE',
-                headers: {
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify(deleteProduct)
+                method: 'DELETE'
             })
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    const remaining = products.filter(product => product._id !== id)
+                    const remaining = products.filter(product => product._id !== _id)
                     setProduct(remaining)
                 })
         }
