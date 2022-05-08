@@ -2,7 +2,7 @@
 
 # Live Site Link: https://bike-planet.web.app/
 
-# Library and Framework I used in my project:
+
 Library I used in this project:
 * react js
 * react firebase hooks
@@ -20,6 +20,5 @@ for authentication I used firebase authentication to implement email login and g
 # Deployment:
 I hosted this project buy firebase hosting.
 
-## Available Scripts
-In the project directory, you can run:
+
 
