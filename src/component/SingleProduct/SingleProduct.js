@@ -1,8 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 
 const SingleProduct = ({ product }) => {
+    const [user] = useAuthState(auth)
     const navigate = useNavigate();
     const handleStockUpdate = () => {
         navigate(`/update/${product._id}`)
@@ -20,7 +23,7 @@ const SingleProduct = ({ product }) => {
                         <span className='text-warning'>{product.name}</span> <small>Price: ${product.price}</small>
                     </h5>
                     <p>{product.description}</p>
-                    <p className='my-1'>Supplier: {product.spplier}</p>
+                    <p className='my-1'>Supplier: {product.spplier} {user?.email}</p>
                     <p>Available Product: {product.quantity} </p>
                 </div>
                 <button onClick={handleStockUpdate} className='btn btn-warning rounded-pill'>Stock Update</button>

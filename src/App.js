@@ -11,6 +11,8 @@ import Register from './component/Register/Register';
 import UpdateProduct from './component/UpdateProduct/UpdateProduct';
 import Additem from './component/Additem/Additem';
 import NotFound from './component/NotFound/NotFound';
+import RequireAuth from './component/RequireAuth/RequireAuth';
+import MyProduct from './component/MyProduct/MyProduct';
 
 function App() {
   return (
@@ -21,11 +23,28 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/blog' element={<Blogs></Blogs>}></Route>
-        <Route path='/inventory' element={<Inventory></Inventory>}></Route>
-        <Route path='/additem' element={<Additem></Additem>}></Route>
+        <Route path='/inventory' element={
+          <RequireAuth>
+            <Inventory></Inventory>
+          </RequireAuth>
+        }></Route>
+        <Route path='/additem' element={
+          <RequireAuth>
+            <Additem></Additem>
+          </RequireAuth>
+        }></Route>
+        <Route path='/myitem' element={
+          <RequireAuth>
+            <MyProduct></MyProduct>
+          </RequireAuth>
+        }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
-        <Route path='/update/:productId' element={<UpdateProduct></UpdateProduct>}></Route>
+        <Route path='/update/:productId' element={
+          <RequireAuth>
+            <UpdateProduct></UpdateProduct>
+          </RequireAuth>
+        }></Route>
 
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>

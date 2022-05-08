@@ -3,8 +3,37 @@ import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { BiUser } from "react-icons/bi";
 import Icon from '../image/login-icon.png'
+import { useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
+
+
+
 
 const Register = () => {
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+
+    const navigate = useNavigate();
+    const handleNavigateLogin = () => {
+        navigate('/home')
+    }
+
+    const handleRegister = async (event) => {
+        event.preventDefault();
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        console.log(email, password);
+        await createUserWithEmailAndPassword(email, password)
+    }
+
     return (
         <div className='login p-5'>
             <h2 className='text-center m-4'>REGISTER NOW</h2>
@@ -12,36 +41,30 @@ const Register = () => {
             <div className="login-form m-auto text-center m-5">
                 <div className='p-3 mx-0'>
                     <div className='mx-auto mb-4'><img className='icon' src={Icon} alt="" /></div>
-                    <form className=''>
+                    <form onSubmit={handleRegister}>
                         <BiUser />
-                        <input className='input' type="text" name="name" id="" placeholder='Your Name' />
+                        <input className='input' type="text" name="name" id="" placeholder='Your Name' required />
                         <hr className='mt-0' />
                         <HiOutlineMail />
-                        <input className='input' type="email" name="email" id="" placeholder='Email Id' />
+                        <input className='input' type="email" name="email" id="" placeholder='Email Id' required />
                         <hr className='mt-0' />
                         <RiLockPasswordLine />
-                        <input className='input' type="password" name="password" id="" placeholder='Password' />
+                        <input className='input' type="password" name="password" id="" placeholder='Password' required />
                         <hr className='mt-0' />
                         <div className=" m-auto">
                             <input className='btn btn-warning w-75 rounded-pill px-5 mt-3' type="submit" value="Register" />
                         </div>
                     </form>
                     <p className='text-start'>
-                        <small>
-                            Forgotten password? <span className='text-danger'>reset password.
-                            </span>
-                        </small>
                         <small className='mt-0 d-block'>
-                            Don't have any account? <span className='text-warning'>please Register.
+                            Already have an account? <span onClick={handleNavigateLogin} className='cursor text-danger'>Login.
                             </span>
                         </small>
                     </p>
                     <p className='text-center'>
                         or
                     </p>
-                    <div className="m-auto">
-                        <button className='btn btn-warning px-5 rounded-pill mt-0'>Sign in with Google</button>
-                    </div>
+                    <SocialLogin></SocialLogin>
                 </div>
             </div>
         </div>

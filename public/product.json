@@ -5,7 +5,7 @@
         "description": " It is available in 6 variants and 4 colours with top variant. The TVS Apache RTR 160 4V is powered by 159.7cc BS6 engine which develops a power of 17.39 bhp and a torque of 14.73 Nm.",
         "price": "4000",
         "quantity": "10",
-        "spplier": ""
+        "spplier": "Md Khaled"
     },
     {
         "name": "Honda SP 125",
@@ -124,23 +124,20 @@
         "img": "https://cdn.pixabay.com/photo/2017/06/26/22/43/ktm-2445495_960_720.jpg",
         "description": "It is available in 5 variants and 4 colours. Powered by a 155 cc bs6 engine, the Yamaha YZF R15 V3 has a 6-Speed gearbox. The Yamaha YZF R15 V3 has Disc front brakes.",
         "price": "14000",
-        "quantity": "12",
-        "spplier": "Md. Saiful Islam"
+        "quantity": "12"
     },
     {
         "name": "BMW M 1000 RR",
         "img": "https://cdn.pixabay.com/photo/2018/02/12/02/05/motorcycle-3147278_960_720.jpg",
         "description": " BMW M 1000 RR is powered by 999cc BS6 engine which develops a power of 209.19 bhp and a torque of 113 Nm. With both front and rear disc brakes.",
         "price": "20000",
-        "quantity": "5",
-        "spplier": "AM Khandaker"
+        "quantity": "5"
     },
     {
         "name": "Kawasaki Z900",
         "img": "https://cdn.pixabay.com/photo/2014/10/24/08/31/motorcycle-500910_960_720.jpg",
         "description": "It is available in 1 variant and 2 colours. Powered by a 948 cc bs6 engine, the Kawasaki Z900 has a 6 Speed gearbox. The Kawasaki Z900 has Double Disc front brakes and Disc rear brakes.",
         "price": "9000",
-        "quantity": "15",
-        "spplier": "Md. Saiful Islam"
+        "quantity": "15"
     }
 ]

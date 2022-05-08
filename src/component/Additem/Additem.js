@@ -1,18 +1,22 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 
 
 const Additem = () => {
+    const [user] = useAuthState(auth);
     const handleAddItem = event => {
         event.preventDefault();
         const name = event.target.name.value;
+        const email = event.target.email.value;
         const price = event.target.price.value;
         const spplier = event.target.spplier.value;
         const quantity = event.target.quantity.value;
         const description = event.target.description.value;
         const img = event.target.img.value;
 
-        const product = { name, price, spplier, quantity, description, img }
+        const product = { name, email, price, spplier, quantity, description, img }
         console.log(product);
 
         // send product to mongo
@@ -37,6 +41,9 @@ const Additem = () => {
             <hr className='w-75 m-auto mb-3' />
             <div className="w-50 m-auto mb-5">
                 <form onSubmit={handleAddItem} className='px-5 py-4 shadow-lg'>
+                    <label>Email: </label>
+                    <input className=' w-100 p-1 mb-2' type="email" name="email" id="" placeholder='Enter Product Name' value={user.email} required />
+
                     <label>Name: </label>
                     <input className=' w-100 p-1 mb-2' type="text" name="name" id="" placeholder='Enter Product Name' required />
 
