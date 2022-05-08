@@ -12,12 +12,16 @@ const MyProduct = () => {
         const email = user.email
         const url = `http://localhost:5000/product?email=${email}`
         console.log(email)
-        fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                setMyProduct(data);
-            });
+
+        if (email) {
+            fetch(url)
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    setMyProduct(data);
+                });
+        }
+
 
     }, [user])
 
