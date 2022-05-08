@@ -34,7 +34,7 @@ const Inventory = () => {
 
     return (
         <div className='container'>
-            <h1>Manage Inventories</h1>
+            <h1 className='mt-4'>Manage Inventories</h1>
 
 
             <div className="">

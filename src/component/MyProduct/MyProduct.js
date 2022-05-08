@@ -10,7 +10,7 @@ const MyProduct = () => {
 
     useEffect(() => {
         const email = user.email
-        const url = `http://localhost:5000/product?email=${email}`
+        const url = `https://lit-gorge-25898.herokuapp.com/product?email=${email}`
         console.log(email)
 
         if (email) {
@@ -27,7 +27,7 @@ const MyProduct = () => {
 
     return (
         <div>
-            <h1>My product:{myProducts.length}</h1>
+            <h1>My products</h1>
 
 
             {

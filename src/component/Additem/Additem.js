@@ -41,8 +41,7 @@ const Additem = () => {
             <hr className='w-75 m-auto mb-3' />
             <div className="w-50 m-auto mb-5">
                 <form onSubmit={handleAddItem} className='px-5 py-4 shadow-lg'>
-                    <label>Email: </label>
-                    <input className=' w-100 p-1 mb-2' type="email" name="email" id="" placeholder='Enter Product Name' value={user.email} required />
+
 
                     <label>Name: </label>
                     <input className=' w-100 p-1 mb-2' type="text" name="name" id="" placeholder='Enter Product Name' required />
@@ -52,6 +51,9 @@ const Additem = () => {
 
                     <label htmlFor="">Supplier Name:</label>
                     <input className='d-block w-100 p-1 mb-2' type="text" name="spplier" id="" placeholder='Enter Supplier Name' required />
+
+                    <label>Email: </label>
+                    <input className=' w-100 p-1 mb-2' type="email" name="email" id="" placeholder='Enter Product Name' value={user.email} readOnly />
 
                     <label htmlFor="">Number of Product</label>
                     <input className='d-block w-100 p-1 mb-2' type="number" name="quantity" id="" placeholder='Product quantity' required />

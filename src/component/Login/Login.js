@@ -5,7 +5,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordLine } from "react-icons/ri";
 import Icon from '../image/login-icon.png';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
@@ -26,7 +26,7 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
     if (loading) {
         return <Loading></Loading>
@@ -55,8 +55,8 @@ const Login = () => {
 
     const handleLogin = (event) => {
         event.preventDefault();
-        const email = emailRef.current.value;
-        const password = passwordRef.current.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
         console.log(email, password);
         signInWithEmailAndPassword(email, password)
     }

@@ -14,6 +14,7 @@ import Loading from '../Loading/Loading';
 
 const Register = () => {
     const [
+
         createUserWithEmailAndPassword,
         loading,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
@@ -21,8 +22,9 @@ const Register = () => {
 
     const navigate = useNavigate();
     const handleNavigateLogin = () => {
-        navigate('/home')
+        navigate('/login')
     }
+
 
 
     if (loading) {
