@@ -20,11 +20,15 @@ const UpdateProduct = () => {
     const handleDelivered = e => {
 
         let quantityAfterDeliver = product.quantity - 1;
-        const sold = quantityAfterDeliver < 1
 
-        if (sold) {
 
-            quantityAfterDeliver = "Out of Stock"
+        if (quantityAfterDeliver < 1) {
+
+
+        }
+        if (quantityAfterDeliver < 0) {
+            alert('Product is out of stock. Please restock!');
+            return;
         }
 
 
@@ -61,8 +65,9 @@ const UpdateProduct = () => {
 
         let updatedquantity = preQuantity + newQuantity
 
-        if (updatedquantity !== Number) {
-            updatedquantity = newQuantity;
+        if (updatedquantity < 1) {
+            alert('product quantity should be a positive number')
+            return;
         }
 
 
@@ -108,7 +113,7 @@ const UpdateProduct = () => {
 
                         <p>{product.description}</p>
                         <p className='my-1'>Supplier: {product.spplier}</p>
-                        <p>Available Product: {product.quantity} piece</p>
+                        <p>Available Product: {product.quantity} </p>
                         <button className='btn btn-warning rounded-pill px-5 py-1 w-50' onClick={handleDelivered}>Deliver</button>
                     </div>
 

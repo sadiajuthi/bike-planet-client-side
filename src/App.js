@@ -13,6 +13,7 @@ import Additem from './component/Additem/Additem';
 import NotFound from './component/NotFound/NotFound';
 import RequireAuth from './component/RequireAuth/RequireAuth';
 import MyProduct from './component/MyProduct/MyProduct';
+import Contact from './component/Contact/Contact';
 
 function App() {
   return (
@@ -45,7 +46,7 @@ function App() {
             <UpdateProduct></UpdateProduct>
           </RequireAuth>
         }></Route>
-
+        <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
 

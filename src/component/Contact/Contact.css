@@ -1,0 +1,24 @@
+.contact-banner {
+    position: relative;
+    opacity: .7;
+
+}
+
+.contact-header {
+    position: absolute;
+    top: 300px;
+    left: 100px;
+
+
+}
+
+.contact-header p {
+    font-size: 23px;
+
+    font-weight: 700;
+}
+
+.contact-header h1 {
+    font-size: 50px;
+    font-weight: 700;
+}

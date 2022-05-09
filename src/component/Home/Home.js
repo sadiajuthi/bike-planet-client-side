@@ -13,8 +13,9 @@ import Product from '../Product/Product';
 const Home = () => {
     return (
         <div>
-            <img className='img-fluid w-100' src={img} alt="" />
-            {/* product section */}
+            {/* <img id='banner' className='img-fluid w-100' src="https://img.freepik.com/free-photo/motorcycle-parking-road-right-side-sunset_38575-88.jpg?w=826" alt="" /> */}
+            <img className='img-fluid w-100' src={img} alt="" /> */}
+            {/* product section
             <Product></Product>
 
             {/* About us secttion */}

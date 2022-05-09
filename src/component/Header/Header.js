@@ -43,7 +43,7 @@ const Header = () => {
                                 :
                                 <></>
                         }
-
+                        <Nav.Link as={Link} to='/contact'>Contact Us</Nav.Link>
                     </Nav>
                     <Nav>
                         {
